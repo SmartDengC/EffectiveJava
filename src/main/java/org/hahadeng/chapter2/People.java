@@ -1,4 +1,4 @@
-package org.hahadeng.create;
+package org.hahadeng.chapter2;
 
 /**
  * @author dCong
