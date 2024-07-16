@@ -27,6 +27,7 @@ public class People {
             this.cd = cd;
         }
 
+        // 创建一个与字段相同的方法，赋值对应的值，然后返回this
         public Builder calories(int val){
             calories = val;
             return this;
@@ -35,13 +36,14 @@ public class People {
             name = val;
             return this;
         }
+        // 使用build方法来创建外部类对象，将Builder的对象传入
         public People build(){
             return new People(this);
         }
-
     }
 
     private People(Builder builder){
+        // 使用Builder实例来赋值外部类字段
         id = builder.id;
         cd = builder.cd;
         name = builder.name;
@@ -51,6 +53,5 @@ public class People {
     public static void main(String[] args) {
         People d001 = new Builder(1, "d001").name("amy").calories(1110).build();
         People d003 = new Builder(2, "d002").name("amy").build();
-
     }
 }
