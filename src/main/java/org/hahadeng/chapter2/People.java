@@ -1,5 +1,7 @@
 package org.hahadeng.chapter2;
 
+import java.util.Objects;
+
 /**
  * @author: HaHaDeng
  */
@@ -21,7 +23,8 @@ public class People {
 
         public Builder(int id, String cd){
             this.id = id;
-            this.cd = cd;
+            // 如果cd为空会报错NullPointerException
+            this.cd = Objects.requireNonNull(cd);
         }
 
         // 创建一个与字段相同的方法，赋值对应的值，然后返回this
@@ -50,5 +53,6 @@ public class People {
     public static void main(String[] args) {
         People d001 = new Builder(1, "d001").name("amy").calories(1110).build();
         People d003 = new Builder(2, "d002").name("amy").build();
+        People d0003 = new Builder(3, null).build();
     }
 }

@@ -3,6 +3,7 @@ package org.hahadeng.chapter2.hahaenum;
 import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author: HaHaDeng
@@ -27,5 +28,9 @@ public class EnumSet1 {
         // [MEDIUE, LARGE]
         System.out.println(range);
         List<String> list = new ArrayList();
+
+        // 为空报错
+        Object o = Objects.requireNonNull(null);
+//        System.out.println(o);
     }
 }
