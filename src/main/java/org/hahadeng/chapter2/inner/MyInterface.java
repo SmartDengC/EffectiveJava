@@ -1,10 +1,7 @@
 package org.hahadeng.chapter2.inner;
 
 /**
- * @ClassName MyInterface
- * @Author dengc4r
- * @Time 2024/7/17 01:36
- * @Description TODO
+ * @author: HaHaDeng
  */
 public interface MyInterface {
     public void display();

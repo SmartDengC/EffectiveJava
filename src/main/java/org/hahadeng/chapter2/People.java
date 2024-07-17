@@ -1,10 +1,7 @@
 package org.hahadeng.chapter2;
 
 /**
- * @author dCong
- * @package_name:org.test
- * @date: 2024/7/16
- * @desc:
+ * @author: HaHaDeng
  */
 
 public class People {

@@ -5,18 +5,19 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * @author dCong
- * @package_name:org.test
- * @date: 2024/7/17
- * @desc:
+ * @author: HaHaDeng
  */
-
 public abstract class Pizza {
 
+    /**
+     * 一个Topping的枚举类
+     */
     public enum Topping {HAM,ONION, PEPPER}
 
+    /**
+     * 一个Topping的集合
+     */
     final Set<Topping> toppings;
-
 
     abstract static class Builder<T extends Builder<T>>{
         EnumSet<Topping> toppings = EnumSet.noneOf(Topping.class);

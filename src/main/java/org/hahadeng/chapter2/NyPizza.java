@@ -3,10 +3,7 @@ package org.hahadeng.chapter2;
 import java.util.Objects;
 
 /**
- * @author dCong
- * @package_name:org.test
- * @date: 2024/7/17
- * @desc:
+ * @author: HaHaDeng
  */
 
 public class NyPizza extends Pizza{

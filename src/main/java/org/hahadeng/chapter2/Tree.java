@@ -1,10 +1,7 @@
 package org.hahadeng.chapter2;
 
 /**
- * @author dCong
- * @package_name:org.hahadeng.chapter2
- * @date: 2024/7/17
- * @desc:
+ * @author: HaHaDeng
  */
 
 public class Tree {
