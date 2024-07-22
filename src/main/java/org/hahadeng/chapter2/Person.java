@@ -90,9 +90,18 @@ public class Person {
         phone = builder.phone;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public static void main(String[] args) {
         // 这个就是链式的使用
         Person build = new Builder("cd", "name").salary(200f).area("四川").build();
+        build.setPhone("iphone");
         System.out.println(build.toString());
 
     }
