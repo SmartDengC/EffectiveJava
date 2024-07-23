@@ -1,7 +1,9 @@
 package org.hahadeng.chapter2;
 
+import com.sun.jdi.VMOutOfMemoryException;
 import com.sun.tools.classfile.ConstantPool;
 
+import java.util.Stack;
 import java.util.concurrent.ForkJoinPool;
 
 /**
@@ -103,6 +105,20 @@ public class Person {
         Person build = new Builder("cd", "name").salary(200f).area("四川").build();
         build.setPhone("iphone");
         System.out.println(build.toString());
+
+        // Do
+        String s = "hello world";
+        // Not Do
+        String s1 = new String("hello world");
+
+        // Do
+        Boolean b = true;
+        Boolean aTrue = Boolean.valueOf("true");
+        // Not Do
+        Boolean aBoolean = new Boolean(true);
+        Stack<Integer> stack = new Stack<>();
+        stack.pop();
+        throw  new VMOutOfMemoryException();
 
     }
 
