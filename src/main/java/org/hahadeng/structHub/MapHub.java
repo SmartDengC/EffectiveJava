@@ -1,4 +1,4 @@
-package org.hahadeng.learnhub;
+package org.hahadeng.structHub;
 
 import java.util.*;
 

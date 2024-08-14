@@ -1,4 +1,4 @@
-package org.hahadeng.learnhub;
+package org.hahadeng.structHub;
 
 /**
  * 学习使用String字符串的方式
