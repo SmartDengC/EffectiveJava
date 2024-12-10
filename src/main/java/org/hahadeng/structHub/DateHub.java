@@ -2,6 +2,7 @@ package org.hahadeng.structHub;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Stack;
 
 /**
  * Date
@@ -18,5 +19,7 @@ public class DateHub {
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         int dayMin = calendar.getActualMinimum(Calendar.DAY_OF_MONTH);
         int dayMax = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
+
+        Stack<Integer> stack = new Stack<>();
     }
 }
