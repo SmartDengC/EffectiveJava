@@ -40,4 +40,27 @@ class Set0Test {
         Integer max = Set0.max(c);
         System.out.println(max);
     }
+
+    @Test
+    void union0() {
+        Set<Integer> s1 = new HashSet<Integer>(){{
+            add(1);
+            add(2);
+        }};
+        Set<Double> s2 = new HashSet<Double>() {{
+            add(1.1);
+            add(1.3);
+        }};
+        Set<? extends Number> numbers = Set0.union0(s1, s2);
+        for(Number n : numbers){
+            System.out.println(n);
+        }
+    }
+
+    @Test
+    void min() {
+        List<Integer> c = Arrays.asList(1,2,3,4);
+        Integer max = Set0.min(c);
+        System.out.println(max);
+    }
 }

@@ -9,6 +9,15 @@ import java.util.*;
 public class Set0 implements Set0Interface{
 
     /**
+     * 加入有界通配符
+     */
+    public static <E> Set<E> union0(Set<? extends E> s1, Set<? extends E> s2){
+        Set<E> result = new HashSet<>(s1);
+        result.addAll(s2);
+        return result;
+    }
+
+    /**
      *  类型参数列表为<E>, 返回类型为Set<E>。
      */
     public static <E> Set<E> union(Set<E> set1, Set<E> set2) {
@@ -32,6 +41,22 @@ public class Set0 implements Set0Interface{
         E result = null;
         for(E e: c) {
             if(result == null || e.compareTo(result) > 0) {
+                result = Objects.requireNonNull(e);
+            }
+        }
+        return result;
+    }
+
+    /**
+     * 直接给我送走了，这么多类型？？
+     */
+    public static <T extends Comparable<? super T>> T min(List<? extends T> list){
+        if(list.isEmpty()){
+            throw new IllegalArgumentException("Empty list");
+        }
+        T result = null;
+        for(T e: list) {
+            if(result == null || e.compareTo(result) < 0) {
                 result = Objects.requireNonNull(e);
             }
         }
