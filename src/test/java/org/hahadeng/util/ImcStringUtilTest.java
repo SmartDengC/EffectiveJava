@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,5 +28,11 @@ class ImcStringUtilTest {
 
     @Test
     void isNotEmpty() {
+    }
+
+    @Test
+    void main(){
+        Random rnd = ThreadLocalRandom.current();
+        System.out.println(rnd.nextInt());
     }
 }
