@@ -44,6 +44,18 @@
             <artifactId>minio</artifactId>
             <version>7.1.2</version>
         </dependency>
+
+        <!--  java运行python代码      -->
+        <dependency>
+            <groupId>org.python</groupId>
+            <artifactId>jython-standalone</artifactId>
+            <version>2.7.4</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.python</groupId>-->
+<!--            <artifactId>jython</artifactId>-->
+<!--            <version>2.7.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 

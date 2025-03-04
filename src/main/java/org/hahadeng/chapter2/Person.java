@@ -1,10 +1,10 @@
 package org.hahadeng.chapter2;
 
-import com.sun.jdi.VMOutOfMemoryException;
-import com.sun.tools.classfile.ConstantPool;
+//import com.sun.jdi.VMOutOfMemoryException;
+//import com.sun.tools.classfile.ConstantPool;
 
 import java.util.Stack;
-import java.util.concurrent.ForkJoinPool;
+//import java.util.concurrent.ForkJoinPool;
 
 /**
  * @author: HaHaDeng
@@ -118,7 +118,7 @@ public class Person {
         Boolean aBoolean = new Boolean(true);
         Stack<Integer> stack = new Stack<>();
         stack.pop();
-        throw  new VMOutOfMemoryException();
+//        throw  new VMOutOfMemoryException();
 
     }
 
