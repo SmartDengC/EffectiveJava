@@ -1,9 +1,6 @@
 package org.hahadeng.structure.tree;
 
-import jnr.ffi.annotations.In;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -13,7 +10,7 @@ import java.util.List;
  * @since 2025/3/26 16:09
  */
 public class Tree {
-    public Node createTree(){
+    public Node createTree() {
         // 构建出来的二叉树是这样的：
         //     1
         //    / \
@@ -29,30 +26,30 @@ public class Tree {
         return root;
     }
 
-    public void dfs(Node root, List<Integer> lit){
+    public void dfs(Node root, List<Integer> lit) {
         // 前序遍历
-        if(root != null){
+        if (root != null) {
             lit.add(root.val);
         }
-        if(root.left != null){
+        if (root.left != null) {
             dfs(root.left, lit);
         }
-        if (root.right != null){
+        if (root.right != null) {
             dfs(root.right, lit);
         }
     }
 
-    public void dfsLeaf(Node root, List<Integer> lit){
-        if(root == null){
+    public void dfsLeaf(Node root, List<Integer> lit) {
+        if (root == null) {
             return;
         }
-        if(root.left == null && root.right == null){
+        if (root.left == null && root.right == null) {
             lit.add(root.val);
         }
-        if(root.left != null){
+        if (root.left != null) {
             dfsLeaf(root.left, lit);
         }
-        if (root.right != null){
+        if (root.right != null) {
             dfsLeaf(root.right, lit);
         }
     }
