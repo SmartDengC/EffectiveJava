@@ -1,7 +1,9 @@
 package org.hahadeng.structure.tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * 树
@@ -60,5 +62,9 @@ public class Tree {
         List<Integer> lit = new ArrayList<>();
         tree.dfsLeaf(root, lit);
         lit.forEach(System.out::println);
+//        Queue<String> q = new LinkedList<>();
+//        q.offer();
+//        q.peek();
+//        q.poll();
     }
 }
