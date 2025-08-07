@@ -1,5 +1,9 @@
 package org.hahadeng.structHub;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 /**
  * 实现Runnable接口
  *
@@ -12,6 +16,10 @@ public class MyThreadImpl implements Runnable {
         for (int i = 0; i < 10; i++) {
             System.out.println(Thread.currentThread().getName() + "线程执行:" + i);
         }
+    }
+
+    public void test() {
+        new ThreadPoolExecutor(1, 1, 1, TimeUnit.SECONDS, new ArrayBlockingQueue<>(1));
     }
 
     public static void main(String[] args) {
