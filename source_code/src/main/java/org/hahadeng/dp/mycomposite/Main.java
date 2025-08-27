@@ -4,7 +4,6 @@ import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
 import com.google.common.collect.TreeMultiset;
-import org.junit.jupiter.api.Test;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
@@ -42,7 +41,6 @@ public class Main {
 
     }
 
-    @Test
     public void test() {
         // false
         System.out.println(BeanUtil.isBean(HashMap.class));
@@ -55,7 +53,6 @@ public class Main {
         System.out.println(set);
     }
 
-    @Test
     public void test1() {
         Province province = new Province("四川");
         String jsonString = JSON.toJSONString(province);
@@ -64,7 +61,6 @@ public class Main {
         System.out.println(o);
     }
 
-    @Test
     public void test2() {
         DateTimeFormatter fm = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String format = fm.format(LocalDateTime.now());
@@ -107,7 +103,6 @@ public class Main {
         System.out.println(i);
     }
 
-    @Test
     public void test3() {
         Date date = new Date();
         // 返回当前系统默认的时区
@@ -120,7 +115,6 @@ public class Main {
         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
     }
 
-    @Test
     public void test4() {
         // 新建一个Date对象
         Date date = new Date();
@@ -129,15 +123,14 @@ public class Main {
         ZoneId zoneId = ZoneId.systemDefault();
         // 转化
         LocalDateTime localDateTime = LocalDateTime.ofInstant(date.toInstant(), zoneId);
-        LocalDate localDate = LocalDate.ofInstant(date.toInstant(), zoneId);
-        LocalTime localTime = LocalTime.ofInstant(date.toInstant(), zoneId);
+        // LocalDate localDate = LocalDate.ofInstant(date.toInstant(), zoneId);
+        // LocalTime localTime = LocalTime.ofInstant(date.toInstant(), zoneId);
 
 
         LocalTime now = LocalTime.now();
 
     }
 
-    @Test
     public void test5() {
         Deque<Integer> s = new ArrayDeque<>();
 
